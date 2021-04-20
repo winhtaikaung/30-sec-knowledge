@@ -1,0 +1,5 @@
+.newtab-contentheader {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}

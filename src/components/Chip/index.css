@@ -1,0 +1,55 @@
+.chip {
+  width: auto;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5px 5px;
+  font-weight: 900;
+  transition: all 0.3s ease-in-out;
+}
+
+.chip-javascript {
+  color: #21212a;
+  background: var(--color__lang__js);
+}
+
+.chip-react {
+  color: #ffffff;
+  background: var(--color__lang__react);
+}
+
+.chip-python {
+  color: #21212a;
+  background: var(--color__lang__python);
+}
+
+.chip-interview {
+  color: #ffffff;
+  background: var(--color__lang__interview);
+}
+
+.chip-php {
+  color: #21212a;
+  background: var(--color__lang__php);
+}
+
+.chip-css {
+  color: #21212a;
+  background: var(--color__lang__css);
+}
+
+.chip-ruby {
+  color: #ffffff;
+  background: var(--color__lang__ruby);
+}
+
+.chip-ramda {
+  color: #ffffff;
+  background: var(--color__lang__ramda);
+}
+
+.chip-cpp {
+  color: #ffffff;
+  background: var(--color__lang__cpp);
+}
