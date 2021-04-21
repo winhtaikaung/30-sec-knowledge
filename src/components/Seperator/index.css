@@ -1,0 +1,12 @@
+.seperator {
+  background: var(--color__secondary);
+}
+.seperator-horizontal {
+  margin: 16px 0;
+  height: 1px !important;
+}
+
+.seperator-vertical {
+  margin: 0 16px;
+  width: 1px !important;
+}

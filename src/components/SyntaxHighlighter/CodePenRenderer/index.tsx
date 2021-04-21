@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { extractCodeFromSnippet } from '../../../utils/snippets'
-import { MarkDownContext } from '../../MDView'
+import { MarkDownContext } from '../../../container/SnippetView'
 import codepen from './codepen.svg'
 import './index.css'
 import CodepenPrefill from 'react-codepen-prefill'

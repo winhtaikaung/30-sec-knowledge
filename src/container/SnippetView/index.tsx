@@ -1,17 +1,17 @@
 import * as React from 'react'
 import ReactMarkdown from 'react-markdown'
 import { uriTransformer } from 'react-markdown'
-import SyntaxHighlighter from '../SyntaxHighlighter'
+import SyntaxHighlighter from '../../components/SyntaxHighlighter'
 import randomize from '../../data/snippet-gen'
 import './index.css'
-import Header from '../Header'
+import Header from '../../components/Header'
 
 export const MarkDownContext = React.createContext<{ snippet: string; category: string }>({
   snippet: '',
   category: '',
 })
 
-const MDView: React.FC = () => {
+const SnippetView: React.FC = () => {
   const [snippetMeta, setSnippetMeta] = React.useState({ snippet: '', category: '' })
 
   React.useEffect(() => {
@@ -40,4 +40,4 @@ const MDView: React.FC = () => {
     </>
   )
 }
-export default MDView
+export default SnippetView

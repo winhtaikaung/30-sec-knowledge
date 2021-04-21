@@ -1,6 +1,6 @@
 import * as React from 'react'
 import Chip from '../Chip'
-import { MarkDownContext } from '../MDView'
+import { MarkDownContext } from '../../container/SnippetView'
 import './index.css'
 const Header: React.FC = () => {
   const { category } = React.useContext(MarkDownContext)

@@ -13,7 +13,7 @@
       "16": "icon16.png",
       "48": "icon48.png"
     },
-    "default_popup": "index.html"
+    "default_popup": "/index.html#/setting"
   },
   "background": {
     "persistent": false,

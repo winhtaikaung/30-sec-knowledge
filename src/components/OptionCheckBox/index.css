@@ -1,0 +1,12 @@
+.option-picker {
+  display: flex;
+  margin: 5px 0;
+  width: 300px;
+  cursor: pointer;
+}
+
+.option-picker > img {
+  width: 24px;
+  margin: 0 12px 0 0;
+  height: 24px;
+}

@@ -1,0 +1,48 @@
+.setting-container {
+}
+
+.setting-container > h2 {
+  color: var(--color__orange--light);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.button {
+  height: var(--button__height);
+  min-width: var(--button__width--min);
+  max-width: var(--button__width--max);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border: none;
+  transition: transform, box-shadow;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 1em;
+  font-weight: 500;
+  color: var(--color__gray--dark);
+  font-weight: 900;
+  font-size: 1em;
+  margin-top: 16px;
+}
+
+.container-horizontal {
+  display: flex;
+}
+
+.button > .button-text {
+  margin-right: 10px;
+}
+
+.button:hover {
+  box-shadow: var(--button__drop-shadow);
+  transform: scale(1.1);
+}
+
+.button-orange {
+  background: var(--color__orange--light);
+}

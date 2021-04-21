@@ -3,21 +3,62 @@ import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 
 import './App.css'
 
-import MDView from './components/MDView'
+import SnippetView from './container/SnippetView'
+import SettingView from './container/SettingView'
+import { getOptions } from './data/options'
+import { FontSize } from './enum'
+
+export const SettingPickerContext = React.createContext<{
+  setting: {
+    selectedOptions: string[]
+    defaultOptions: string[]
+    theme: string
+    fontSize: FontSize
+  }
+  setSetting?: React.Dispatch<
+    React.SetStateAction<{
+      selectedOptions: string[]
+      defaultOptions: string[]
+      theme: string
+      fontSize: FontSize
+    }>
+  >
+}>({
+  setting: {
+    selectedOptions: [],
+    defaultOptions: [],
+    theme: 'dark',
+    fontSize: FontSize.xs,
+  },
+})
 
 function App() {
+  const [setting, setSetting] = React.useState({
+    selectedOptions: Array<string>(0),
+    defaultOptions: getOptions(),
+    theme: 'dark',
+    fontSize: FontSize.xs,
+  })
+
   return (
     <div className="App">
-      <Router>
-        <Switch>
-          <Route exact path={`${process.env.PUBLIC_URL}/`}>
-            <MDView />
-          </Route>
-          <Route exact path={`${process.env.PUBLIC_URL}/setting`}>
-            setting
-          </Route>
-        </Switch>
-      </Router>
+      <SettingPickerContext.Provider
+        value={{
+          setting: setting,
+          setSetting: setSetting,
+        }}
+      >
+        <Router>
+          <Switch>
+            <Route exact path={`${process.env.PUBLIC_URL}/`}>
+              <SettingView />
+            </Route>
+            <Route exact path={`${process.env.PUBLIC_URL}/setting`}>
+              <SnippetView />
+            </Route>
+          </Switch>
+        </Router>
+      </SettingPickerContext.Provider>
     </div>
   )
 }
