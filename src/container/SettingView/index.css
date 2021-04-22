@@ -34,6 +34,13 @@
   display: flex;
 }
 
+.switch-holder {
+  display: flex;
+  align-items: center;
+  font-weight: 900;
+  width: 300px;
+}
+
 .button > .button-text {
   margin-right: 10px;
 }

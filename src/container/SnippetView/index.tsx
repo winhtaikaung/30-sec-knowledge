@@ -5,6 +5,8 @@ import SyntaxHighlighter from '../../components/SyntaxHighlighter'
 import randomize from '../../data/snippet-gen'
 import './index.css'
 import Header from '../../components/Header'
+import { useApiReducer } from '../../api'
+import { SettingPickerContext } from '../../App'
 
 export const MarkDownContext = React.createContext<{ snippet: string; category: string }>({
   snippet: '',
@@ -13,13 +15,20 @@ export const MarkDownContext = React.createContext<{ snippet: string; category: 
 
 const SnippetView: React.FC = () => {
   const [snippetMeta, setSnippetMeta] = React.useState({ snippet: '', category: '' })
-
+  const { getSetting } = React.useContext(SettingPickerContext)
   React.useEffect(() => {
-    const randomSnippetPath = randomize()
+    const doFetch = async () => {
+      if (getSetting) {
+        const setting = await getSetting()
 
-    fetch(`${process.env.PUBLIC_URL}/assets/snippets/${randomSnippetPath}`)
-      .then((res) => res.text())
-      .then((text) => setSnippetMeta({ snippet: text, category: randomSnippetPath.split('/')[0] }))
+        const randomSnippetPath = randomize(setting.selectedOptions)
+
+        fetch(`${process.env.PUBLIC_URL}/assets/snippets/${randomSnippetPath}`)
+          .then((res) => res.text())
+          .then((text) => setSnippetMeta({ snippet: text, category: randomSnippetPath.split('/')[0] }))
+      }
+    }
+    doFetch()
   }, [])
 
   return (

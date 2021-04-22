@@ -8,18 +8,28 @@ const getShuffledArr = (arr: any[]): any[] => {
   return [arr[rand], ...getShuffledArr(arr.filter((_, i) => i !== rand))]
 }
 
-var selectedItems = ['css', 'react', 'python', 'interview', 'javascript']
-const snippets = getShuffledArr(
-  Object.keys(META)
-    .filter((item: any) => selectedItems.includes(item))
-    // @ts-ignore
-    .map((item: any) => META[item])
-    .flatMap((item: any) => item),
-)
+const snippets = (selectedItems: string[]) => {
+  if (selectedItems.length === 0) {
+    return getShuffledArr(
+      Object.keys(META)
+        // @ts-ignore
+        .map((item: any) => META[item])
+        .flatMap((item: any) => item),
+    )
+  } else {
+    return getShuffledArr(
+      Object.keys(META)
+        .filter((item: any) => selectedItems.includes(item))
+        // @ts-ignore
+        .map((item: any) => META[item])
+        .flatMap((item: any) => item),
+    )
+  }
+}
 
 function* snippetRandomizer(snippets: any[]) {
   yield snippets[Math.floor(Math.random() * snippets.length)]
 }
 
-const randomizeSnippets = () => snippetRandomizer(snippets).next().value
+const randomizeSnippets = (selectedOptions: string[]) => snippetRandomizer(snippets(selectedOptions)).next().value
 export default randomizeSnippets

@@ -1,10 +1,12 @@
 import * as React from 'react'
 import { SettingPickerContext } from '../../App'
 import OptionCheckBox from '../../components/OptionCheckBox'
+import OptionSwitch from '../../components/OptionSwitch'
 import Seperator from '../../components/Seperator'
 import './index.css'
 const SettingView: React.FC = () => {
   const { setting } = React.useContext(SettingPickerContext)
+  //   console.log(setting)
   return (
     <>
       <div className="setting-container">
@@ -16,13 +18,16 @@ const SettingView: React.FC = () => {
         <div className="container-horizontal">
           <div className="container-horizontal-left">
             <h2>Enabled Snippets</h2>
-            {setting.defaultOptions.map((item: string, index: number) => (
+            {setting.defaultOptions.map((item: string) => (
               <OptionCheckBox key={item} category={item} />
             ))}
           </div>
           <Seperator orientation="vertical" />
           <div className="container-horizontal-right">
-            <h2>Enabled Snippets</h2>
+            <h2>Dark/Light Theme</h2>
+            <div className="switch-holder">
+              <OptionSwitch />
+            </div>
           </div>
         </div>
       </div>

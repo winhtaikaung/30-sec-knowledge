@@ -1,0 +1,32 @@
+.option-switch {
+  height: 24px;
+  width: 48px;
+  display: inline-block;
+  border: 2px solid var(--color__orange--light);
+  border-radius: 24px;
+  margin-right: 12px;
+  font-weight: 900;
+  cursor: pointer;
+  position: relative;
+}
+
+.option-switch::before {
+  content: '';
+  width: 18px;
+  height: 18px;
+  background: linear-gradient(to left, var(--color__orange--light), var(--color__orange));
+  position: absolute;
+  border-radius: 50%;
+  top: 3px;
+  bottom: 3px;
+  left: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.option-switch-unchecked:before {
+  margin-left: 0px;
+}
+
+.option-switch-checked:before {
+  margin-left: 24px;
+}
