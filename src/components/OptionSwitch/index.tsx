@@ -1,8 +1,7 @@
 import * as React from 'react'
 
 import './index.css'
-import square from './square.svg'
-import checkedSquare from './checked-square.svg'
+
 import { SettingPickerContext } from '../../App'
 
 const OptionSwitch: React.FC = () => {

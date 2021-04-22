@@ -5,7 +5,7 @@ import SyntaxHighlighter from '../../components/SyntaxHighlighter'
 import randomize from '../../data/snippet-gen'
 import './index.css'
 import Header from '../../components/Header'
-import { useApiReducer } from '../../api'
+
 import { SettingPickerContext } from '../../App'
 
 export const MarkDownContext = React.createContext<{ snippet: string; category: string }>({
@@ -29,7 +29,7 @@ const SnippetView: React.FC = () => {
       }
     }
     doFetch()
-  }, [])
+  }, [getSetting])
 
   return (
     <>

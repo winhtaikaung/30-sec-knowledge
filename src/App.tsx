@@ -26,7 +26,7 @@ export const SettingPickerContext = React.createContext<{
     selectedOptions: [],
     defaultOptions: [],
     theme: 'dark',
-    fontSize: FontSize.xs,
+    fontSize: FontSize.xxs,
   },
 })
 
@@ -35,7 +35,7 @@ function App() {
     selectedOptions: Array<string>(0),
     defaultOptions: getOptions(),
     theme: 'dark',
-    fontSize: FontSize.xs,
+    fontSize: FontSize.xxs,
   })
   React.useEffect(() => {
     const extractData = async () => {

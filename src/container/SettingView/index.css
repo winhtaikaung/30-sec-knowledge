@@ -41,6 +41,14 @@
   width: 300px;
 }
 
+.option-range-holder {
+  display: flex;
+  align-items: center;
+  font-weight: 900;
+  height: 25px;
+  width: 300px;
+}
+
 .button > .button-text {
   margin-right: 10px;
 }

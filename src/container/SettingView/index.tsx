@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { SettingPickerContext } from '../../App'
 import OptionCheckBox from '../../components/OptionCheckBox'
+import OptionRange from '../../components/OptionRange'
 import OptionSwitch from '../../components/OptionSwitch'
 import Seperator from '../../components/Seperator'
 import './index.css'
@@ -27,6 +28,10 @@ const SettingView: React.FC = () => {
             <h2>Dark/Light Theme</h2>
             <div className="switch-holder">
               <OptionSwitch />
+            </div>
+            <h2>Font Size</h2>
+            <div className="option-range-holder">
+              <OptionRange />
             </div>
           </div>
         </div>
