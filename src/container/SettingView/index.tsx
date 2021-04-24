@@ -7,7 +7,7 @@ import Seperator from '../../components/Seperator'
 import './index.css'
 const SettingView: React.FC = () => {
   const { setting } = React.useContext(SettingPickerContext)
-  //   console.log(setting)
+  console.log(setting)
   return (
     <>
       <div className="setting-container">

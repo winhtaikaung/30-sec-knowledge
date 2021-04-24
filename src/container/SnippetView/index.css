@@ -50,12 +50,16 @@
   border-radius: 3px;
 }
 
+.markdown-renderer pre > div {
+  font-size: inherit !important;
+}
 .markdown-renderer pre code {
   display: inline;
   max-width: auto;
   padding: 0;
   margin: 0;
   overflow: visible;
+  font-size: inherit !important;
   line-height: inherit;
   word-wrap: normal;
   background-color: transparent;
@@ -70,4 +74,26 @@
   white-space: pre;
   background: transparent;
   border: 0;
+}
+
+.font-size-xxl {
+  font-size: var(--font__size--xxl);
+}
+.font-size-xl {
+  font-size: var(--font__size--xl);
+}
+.font-size-l {
+  font-size: var(--font__size--l);
+}
+.font-size-m {
+  font-size: var(--font__size--m);
+}
+.font-size-s {
+  font-size: var(--font__size--s);
+}
+.font-size-xs {
+  font-size: var(--font__size--xs);
+}
+.font-size-xxs {
+  font-size: var(--font__size--xxs);
 }

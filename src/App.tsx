@@ -52,7 +52,7 @@ function App() {
       }
     }
     extractData()
-  }, [bufferedSetting])
+  }, [])
 
   return (
     <div className="App">
@@ -61,7 +61,7 @@ function App() {
           setting: bufferedSetting,
           getSetting: async () => {
             const storedSetting = await getStorage(SETTING_STORAGE)
-
+            console.log(storedSetting)
             if (isEmpty(storedSetting)) {
               return bufferedSetting as SettingObject
             } else {
@@ -78,10 +78,10 @@ function App() {
         <Router>
           <Switch>
             <Route exact path={`${process.env.PUBLIC_URL}/`}>
-              <SettingView />
+              <SnippetView />
             </Route>
             <Route exact path={`${process.env.PUBLIC_URL}/setting`}>
-              <SnippetView />
+              <SettingView />
             </Route>
           </Switch>
         </Router>

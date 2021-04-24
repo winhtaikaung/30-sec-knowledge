@@ -29,6 +29,11 @@
   background: var(--color__lang__interview);
 }
 
+.chip-go {
+  color: #21212a;
+  background: var(--color__lang__go);
+}
+
 .chip-php {
   color: #21212a;
   background: var(--color__lang__php);

@@ -7,6 +7,7 @@ import './index.css'
 import Header from '../../components/Header'
 
 import { SettingPickerContext } from '../../App'
+import { RangeScale } from '../../components/OptionRange'
 
 export const MarkDownContext = React.createContext<{ snippet: string; category: string }>({
   snippet: '',
@@ -15,10 +16,10 @@ export const MarkDownContext = React.createContext<{ snippet: string; category: 
 
 const SnippetView: React.FC = () => {
   const [snippetMeta, setSnippetMeta] = React.useState({ snippet: '', category: '' })
-  const { getSetting } = React.useContext(SettingPickerContext)
+  const { getSetting, setting } = React.useContext(SettingPickerContext)
   React.useEffect(() => {
-    const doFetch = async () => {
-      if (getSetting) {
+    if (getSetting) {
+      const doFetch = async () => {
         const setting = await getSetting()
 
         const randomSnippetPath = randomize(setting.selectedOptions)
@@ -27,9 +28,9 @@ const SnippetView: React.FC = () => {
           .then((res) => res.text())
           .then((text) => setSnippetMeta({ snippet: text, category: randomSnippetPath.split('/')[0] }))
       }
+      doFetch()
     }
-    doFetch()
-  }, [getSetting])
+  }, [])
 
   return (
     <>
@@ -39,11 +40,13 @@ const SnippetView: React.FC = () => {
           category: snippetMeta.category,
         }}
       >
-        <Header />
-        <div className="markdown-renderer">
-          <ReactMarkdown transformLinkUri={uriTransformer} skipHtml={true} components={SyntaxHighlighter}>
-            {snippetMeta.snippet}
-          </ReactMarkdown>
+        <div className={`font-size-${(RangeScale[setting.fontSize].size as string).toLowerCase()}`}>
+          <Header />
+          <div className="markdown-renderer">
+            <ReactMarkdown transformLinkUri={uriTransformer} skipHtml={true} components={SyntaxHighlighter}>
+              {snippetMeta.snippet}
+            </ReactMarkdown>
+          </div>
         </div>
       </MarkDownContext.Provider>
     </>

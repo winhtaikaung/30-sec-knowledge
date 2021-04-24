@@ -7,6 +7,13 @@
   margin-bottom: 16px;
 }
 
+.container-horizontal-left {
+  flex-grow: 1;
+}
+.container-horizontal-right {
+  flex-grow: 1;
+}
+
 .button {
   height: var(--button__height);
   min-width: var(--button__width--min);

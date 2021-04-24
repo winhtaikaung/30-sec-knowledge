@@ -14,6 +14,7 @@
   --color__lang__python: linear-gradient(135deg, #56a9ec 0%, #56a9ec 50%, #ffe05d 50%, #ffe05d 100%);
   --color__lang__interview: #5100ff;
   --color__lang__php: #aeb2d5;
+  --color__lang__go: #67d0de;
   --color__lang__css: #2caae1;
   --color__lang__ruby: #b60d01;
   --color__lang__ramda: #884499;
@@ -32,6 +33,14 @@
 
   --bg__code--block: var(--color__gray);
   --color__border: var(--color__gray--light);
+
+  --font__size--xxs: 12px;
+  --font__size--xs: 14px;
+  --font__size--s: 16px;
+  --font__size--m: 18px;
+  --font__size--l: 20px;
+  --font__size--xl: 22px;
+  --font__size--xxl: 24px;
 
   --button__height: 32px;
   --button__width--min: 144px;
