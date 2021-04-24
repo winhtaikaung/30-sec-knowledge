@@ -1,46 +1,58 @@
-# Getting Started with Create React App
+# 30 Seconds of knowledge(စက္ကန့် ၃၀ လေ့လာဖွယ်)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ဒီ Application လေးဟာ @petrovicstefanrs ရဲ့[30 Seconds of Knowledge](https://github.com/petrovicstefanrs/30_seconds_of_knowledge) ဆိုတဲ့ Chrome Extension လေးရဲ့ Idea ကို မူတည်ပြီး Chrome Extension ကိုဖန်တီးထားတာပါ။ သူ့ဒီဇိုင်းတော်တော်များများကို ကူးထားပါတယ်။
 
-## Available Scripts
+# Why re-invent ? ဘာကြောင့်ပြန်လုပ်တာလဲ
 
-In the project directory, you can run:
+သူ့ရဲ့ Original Version မှာ မပါတဲ့ တခြား အရာတွေကို လွယ်လွယ်ကူကူ ထည့်လို့ရအောင် ပြန်လုပ်ထားတာပါ။
 
-### `yarn start`
+# What to do next?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Myanmar Language support
+- More other fundamental snippets (Algorithms, Datastructure)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# Credits
 
-### `yarn test`
+ဒီ Snippets တွေ က @petrovicstefanrs သုံးထားတဲ့ Snippets တွေဖြစ်ပြီး Golang အတွက် က တော့ [GoByExample](https://gobyexample.com) က နေပြန်လည်စုတုပြုလုပ်ထားခြင်းဖြစ်ပါတယ်၊။
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Contribution
 
-### `yarn build`
+## Contribution to Snippets
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- If you have new awesome language/model to share in snippets we are welcome
+- Fork Repo
+- Create new folder in `public/assets/snippets/
+- Make sure to set the folder name short if possible
+- Then write your snippets in Markdown as following format
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+````markdown
+### Channels
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Description
 
-### `yarn eject`
+Your awesome description
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### Example
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    ```go
+    // Code Example if any
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### Explanation
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Explanation if required
+````
 
-## Learn More
+## Contribution to Code
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Fork Repo
+- Clone and `cd` to cloned folder
+- git checkout -b feat/awesome-feature
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Dev Environment
+
+- run `yarn watch` for live changes in browser (But you have to refresh browser)
+- After `yarn watch` then open Chrome and navigate to [chrome://extensions](chrome://extensions)
+- Enable Developer Mode
+- Click `Load Unpacked`
+- Then select the `dev` folder inside your cloned directory
