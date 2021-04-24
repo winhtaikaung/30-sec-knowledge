@@ -26,7 +26,7 @@
 - Then write your snippets in Markdown as following format
 
 ````markdown
-### Channels
+### Snippet Title
 
 #### Description
 
