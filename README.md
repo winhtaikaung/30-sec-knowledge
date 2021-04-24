@@ -48,6 +48,7 @@ Explanation if required
 - Fork Repo
 - Clone and `cd` to cloned folder
 - git checkout -b feat/awesome-feature
+- Send PR
 
 ### Dev Environment
 
