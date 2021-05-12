@@ -8,7 +8,7 @@
   --color__orange--light: #fea04f;
   --color__header__gradient: linear-gradient(to top, var(--color__gray--dark) 0%, #14141a 100%);
   --color__footer__gradient: linear-gradient(to bottom, var(--color__gray--dark) 0%, #14141a 100%);
-
+  --color__lang__algorithms: linear-gradient(135deg, #56eca6 0%, #56ecba 50%, #ffffff 50%, #f7f7f7 100%);
   --color__lang__js: #f0db4e;
   --color__lang__react: #009bb7;
   --color__lang__python: linear-gradient(135deg, #56a9ec 0%, #56a9ec 50%, #ffe05d 50%, #ffe05d 100%);

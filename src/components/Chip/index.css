@@ -19,6 +19,11 @@
   background: var(--color__lang__react);
 }
 
+.chip-algorithms {
+  color: #21212a;
+  background: var(--color__lang__algorithms);
+}
+
 .chip-python {
   color: #21212a;
   background: var(--color__lang__python);
