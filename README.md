@@ -15,6 +15,8 @@
 
 ဒီ Snippets တွေ က @petrovicstefanrs သုံးထားတဲ့ Snippets တွေဖြစ်ပြီး Golang အတွက် က တော့ [GoByExample](https://gobyexample.com) က နေပြန်လည်စုတုပြုလုပ်ထားခြင်းဖြစ်ပါတယ်၊။
 
+Algorithms ကတော့ [GeeksForGeeks](https://www.geeksforgeeks.org/) ရဲ့ ရှင်းလင်းတင်ပြချက်တွေကို ပြန်လည်ဖော်ပြထားပါတယ်
+
 # Contribution
 
 ## Contribution to Snippets
