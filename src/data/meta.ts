@@ -1,5 +1,12 @@
 export const META = {
-  algorithms: ['algorithms/binarysearch.md', 'algorithms/mergesort.md', 'algorithms/quicksort.md'],
+  algorithms: [
+    'algorithms/binarysearch.md',
+    'algorithms/mergesort.md',
+    'algorithms/quicksort.md',
+    'algorithms/bfs.md',
+    'algorithms/dfs.md',
+    'algorithms/dijkstra.md',
+  ],
   cpp: [
     'cpp/adjacent_find.md',
     'cpp/assign.md',
