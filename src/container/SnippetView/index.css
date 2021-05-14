@@ -1,13 +1,12 @@
 .markdown-renderer {
   -webkit-text-size-adjust: 100%;
   line-height: 1.5;
-  color: var(--font__color--primary);
+
   font-size: 1.25em;
   padding: 24px 0;
   word-wrap: break-word;
   border-top: 1px solid var(--color__border);
   border-bottom: 1px solid var(--color__border);
-  background-color: var(--color__gray--dark);
 }
 
 .markdown-renderer > *:first-child {
@@ -46,7 +45,6 @@
   overflow: auto;
   font-size: 100%;
   line-height: 1.45;
-  background-color: var(--color__gray--dark);
   border-radius: 3px;
 }
 

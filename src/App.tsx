@@ -55,7 +55,7 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
+    <div className={`App ${bufferedSetting.theme === 'dark' ? 'bg-black font-white' : 'bg-white font-black'}`}>
       <SettingPickerContext.Provider
         value={{
           setting: bufferedSetting,

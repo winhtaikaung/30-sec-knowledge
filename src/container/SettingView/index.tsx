@@ -10,7 +10,7 @@ const SettingView: React.FC = () => {
 
   return (
     <>
-      <div className="setting-container">
+      <div className={`setting-container ${setting.theme === 'dark' ? 'font-white' : 'font-black'}`}>
         <h2>Suprise Me</h2>
         <div className="button-orange button ">
           <div className="button-text">Open Random Snippet</div>

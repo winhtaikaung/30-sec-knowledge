@@ -1,5 +1,6 @@
 :root {
   --color__white: #f0f0f7;
+  --color__white--max: #ffffff;
   --color__white--dark: #b7b7cd;
   --color__gray: #353740;
   --color__gray--light: #5e5d66;
@@ -81,4 +82,19 @@ code {
 }
 .font-size-xxs {
   font-size: var(--font__size--xxs);
+}
+
+.font-white {
+  color: var(--font__color--primary);
+}
+.font-black {
+  color: var(--color__gray--dark);
+}
+
+.bg-white {
+  background: var(--color__white--max);
+}
+
+.bg-black {
+  background: var(--color__gray--dark);
 }
