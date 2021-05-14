@@ -1,0 +1,26 @@
+.copy-button {
+  position: relative;
+  display: flex;
+  float: right;
+  justify-content: center;
+  align-items: center;
+  bottom: 15px;
+  right: -15px;
+  width: 40px;
+  height: 40px;
+  min-width: unset;
+  max-width: unset;
+  border-radius: 50%;
+  border: none;
+  background: var(--color__white);
+
+  transition: transform, box-shadow;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  cursor: pointer;
+}
+
+.copy-button:hover {
+  box-shadow: var(--button__drop-shadow);
+  transform: scale(1.1);
+}
