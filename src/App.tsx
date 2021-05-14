@@ -2,7 +2,7 @@ import React from 'react'
 import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 
 import './App.css'
-
+import logo from './logo.svg'
 import SnippetView from './container/SnippetView'
 import SettingView from './container/SettingView'
 import { getOptions } from './data/options'
@@ -78,6 +78,9 @@ function App() {
           },
         }}
       >
+        <a href="https://github.com/winhtaikaung/30-sec-knowledge" className="app-link" target="_blank">
+          <img className="app-logo" alt="appLogo" src={logo} />
+        </a>
         <Router>
           <Switch>
             <Route exact path={`${process.env.PUBLIC_URL}/`}>

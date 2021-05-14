@@ -1,4 +1,4 @@
-import reactSyntaxHighlighter, { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 
 import { dracula, solarizedlight } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import CodePenRenderer from './CodePenRenderer'
