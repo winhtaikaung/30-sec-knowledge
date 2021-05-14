@@ -27,9 +27,11 @@ const snippets = (selectedItems: string[]) => {
   }
 }
 
-function* snippetRandomizer(snippets: any[]) {
-  yield snippets[Math.floor(Math.random() * snippets.length)]
+function snippetRandomizer(snippets: any[]) {
+  return snippets[Math.floor(Math.random() * snippets.length)]
 }
 
-const randomizeSnippets = (selectedOptions: string[]) => snippetRandomizer(snippets(selectedOptions)).next().value
+const randomizeSnippets = (selectedOptions: string[]) => {
+  return snippetRandomizer(snippets(selectedOptions))
+}
 export default randomizeSnippets

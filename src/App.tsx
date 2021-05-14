@@ -61,7 +61,7 @@ function App() {
           setting: bufferedSetting,
           getSetting: async () => {
             const storedSetting = await getStorage(SETTING_STORAGE)
-            console.log(storedSetting)
+
             if (isEmpty(storedSetting)) {
               return bufferedSetting as SettingObject
             } else {
