@@ -9,6 +9,7 @@ import { getOptions } from './data/options'
 import { FontSize } from './enum'
 import { getStorage, setStorage, SETTING_STORAGE } from './utils/storage'
 import { isEmpty } from './utils/misc'
+import SnackBarMessage from './components/SnackBar'
 
 type SettingObject = {
   selectedOptions: string[]
@@ -72,6 +73,8 @@ function App() {
           setSetting: async (updatedSetting: SettingObject) => {
             saveBufferedSetting(updatedSetting)
             setStorage(SETTING_STORAGE, updatedSetting)
+            const snippetContainer = document.body
+            SnackBarMessage('Setting has been saved', snippetContainer)
           },
         }}
       >

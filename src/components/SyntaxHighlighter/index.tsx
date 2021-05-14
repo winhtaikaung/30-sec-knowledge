@@ -28,7 +28,8 @@ const HightlighterRenderer: React.FC<{ match: any[]; props: any; children: strin
       <CopyButton
         onClick={(e) => {
           copyToClipboard(children)
-          SnackBar('Copied to ClipBoard')
+          const snippetContainer = document.getElementById('snippetView')
+          SnackBar('Copied to ClipBoard', snippetContainer)
         }}
       />
     </>
