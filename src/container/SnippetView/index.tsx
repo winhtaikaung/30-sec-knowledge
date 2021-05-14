@@ -40,7 +40,7 @@ const SnippetView: React.FC = () => {
           category: snippetMeta.category,
         }}
       >
-        <div className={`font-size-${(RangeScale[setting.fontSize].size as string).toLowerCase()}`}>
+        <div id="snippetView" className={`font-size-${(RangeScale[setting.fontSize].size as string).toLowerCase()}`}>
           <Header />
           <div className="markdown-renderer">
             <ReactMarkdown transformLinkUri={uriTransformer} skipHtml={true} components={SyntaxHighlighter}>

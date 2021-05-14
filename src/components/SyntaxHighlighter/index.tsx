@@ -3,6 +3,9 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { xonokai } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import CodePenRenderer from './CodePenRenderer'
 import { validURL } from '../../utils/string'
+import CopyButton from '../CopyButton'
+import { copyToClipboard } from '../../utils/snippets'
+import SnackBar from '../SnackBar'
 
 const component: any = {
   code({ node, inline, className, children, ...props }: any) {
@@ -21,6 +24,12 @@ const component: any = {
           }}
           children={String(children).replace(/\n$/, '')}
           {...props}
+        />
+        <CopyButton
+          onClick={(e) => {
+            copyToClipboard(children)
+            SnackBar('Copied to ClipBoard')
+          }}
         />
       </>
     ) : (

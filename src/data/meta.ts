@@ -6,6 +6,8 @@ export const META = {
     'algorithms/bfs.md',
     'algorithms/dfs.md',
     'algorithms/dijkstra.md',
+    'algorithms/bubblesort.md',
+    'algorithms/heapsort.md',
   ],
   cpp: [
     'cpp/adjacent_find.md',

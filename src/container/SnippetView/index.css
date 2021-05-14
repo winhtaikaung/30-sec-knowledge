@@ -75,25 +75,3 @@
   background: transparent;
   border: 0;
 }
-
-.font-size-xxl {
-  font-size: var(--font__size--xxl);
-}
-.font-size-xl {
-  font-size: var(--font__size--xl);
-}
-.font-size-l {
-  font-size: var(--font__size--l);
-}
-.font-size-m {
-  font-size: var(--font__size--m);
-}
-.font-size-s {
-  font-size: var(--font__size--s);
-}
-.font-size-xs {
-  font-size: var(--font__size--xs);
-}
-.font-size-xxs {
-  font-size: var(--font__size--xxs);
-}
