@@ -47,6 +47,17 @@
   --button__width--min: 144px;
   --button__width--max: calc(var(--button__width--min) * 2);
   --button__drop-shadow: 0 10px 20px 2px rgba(0, 0, 0, 0.1);
+
+  /* FAB Button */
+  --l: 48px;
+
+  /* Animation */
+
+  --animation__slide_in--left: slide-in-blurred-left 0.1s cubic-bezier(0.23, 1, 0.32, 1) both;
+  --animation__slide_in--right: slide-in-blurred-right 1s cubic-bezier(0.23, 1, 0.32, 1) both;
+
+  --animation__fade_in: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  --animation__fade_out: fade-out 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 body {

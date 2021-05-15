@@ -1,0 +1,72 @@
+.fabButton {
+  display: none;
+}
+
+.fabButton + label {
+  cursor: pointer;
+  position: fixed;
+  right: 2em;
+  bottom: 1em;
+  background-color: var(--color__white);
+  height: var(--l);
+  width: var(--l);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.fabButton + label > img {
+  position: relative;
+  left: calc(var(--l) / 4);
+  top: calc(var(--l) / 4);
+}
+
+.button > img {
+  position: relative;
+  right: calc(1em / 2);
+  top: calc(-0.5em);
+}
+
+.one,
+.two,
+.three {
+  cursor: pointer;
+  position: fixed;
+  right: 2.5em;
+  bottom: 1em;
+  padding: 1em;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  opacity: 0;
+  z-index: 1;
+  pointer-events: all;
+  font-size: 1em;
+  color: #fff;
+  background-color: var(--color__white);
+}
+
+.fabButton:checked ~ .one,
+.fabButton:checked ~ .two,
+.fabButton:checked ~ .three {
+  opacity: 1;
+}
+
+.fabButton:checked ~ .one {
+  transform: translateX(-0.1em) translateY(-5em);
+  transition-delay: 0.2s;
+}
+
+.fabButton:checked ~ .two {
+  transform: translateX(-0.1em) translateY(-9.5em);
+  transition-delay: 0.1s;
+}
+
+.fabButton:checked ~ .three {
+  transform: translateX(-0.1em) translateY(-14em);
+}
+
+.fabButton:checked ~ .one:hover,
+.fabButton:checked ~ .two:hover,
+.fabButton:checked ~ .three:hover {
+  opacity: 0.9;
+}

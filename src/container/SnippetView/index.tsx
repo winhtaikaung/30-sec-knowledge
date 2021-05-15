@@ -14,7 +14,7 @@ export const MarkDownContext = React.createContext<{ snippet: string; category: 
   category: '',
 })
 
-const SnippetView: React.FC = () => {
+const SnippetView: React.FC<{ timestamp: string }> = ({ timestamp }) => {
   const [snippetMeta, setSnippetMeta] = React.useState({ snippet: '', category: '' })
   const { getSetting, setting } = React.useContext(SettingPickerContext)
   React.useEffect(() => {
@@ -30,7 +30,7 @@ const SnippetView: React.FC = () => {
       }
       doFetch()
     }
-  }, [])
+  }, [timestamp])
 
   return (
     <>
