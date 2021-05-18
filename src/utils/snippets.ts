@@ -21,12 +21,15 @@ export const copyToClipboard = (str: string) => {
   el.style.position = 'absolute'
   el.style.left = '-9999px'
   document.body.appendChild(el)
-  const selected = document?.getSelection().rangeCount > 0 ? document?.getSelection().getRangeAt(0) : false
+  // @ts-ignore
+  const selected = document.getSelection().rangeCount > 0 ? document.getSelection().getRangeAt(0) : false
   el.select()
   document.execCommand('copy')
   document.body.removeChild(el)
   if (selected) {
+    //@ts-ignore
     document?.getSelection().removeAllRanges()
+    // @ts-ignore
     document?.getSelection().addRange(selected)
   }
 }

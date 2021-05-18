@@ -23,13 +23,17 @@ const SnackBar: React.FC<{ message: React.ReactNode; container: Node; root?: Nod
   )
 }
 
-const SnackBarMessage = (message: string, snippetContainer: Node) => {
+const SnackBarMessage = (message: string, snippetContainer?: HTMLElement | null) => {
   const container = document.createElement('div')
+  let tempContainer = snippetContainer
+  if (!tempContainer) {
+    tempContainer = document.createElement('div')
+  }
 
   ReactDOM.render(
     ReactDOM.createPortal(
-      <SnackBar message={message} container={container} root={snippetContainer} />,
-      snippetContainer?.appendChild(container),
+      <SnackBar message={message} container={container} root={tempContainer} />,
+      tempContainer.appendChild(container),
     ),
     container,
   )

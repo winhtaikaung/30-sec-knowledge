@@ -16,6 +16,8 @@
   --color__lang__interview: #5100ff;
   --color__lang__php: #aeb2d5;
   --color__lang__go: #67d0de;
+  --color__lang__dart: linear-gradient(135deg, #41b1ed 0%, #41b1ed 50%, #045496 50%, #045496 100%);
+  --color__lang__csharp: linear-gradient(135deg, #9e77d6 0%, #9e77d6 50%, #352f71 50%, #352f71 100%);
   --color__lang__css: #2caae1;
   --color__lang__ruby: #b60d01;
   --color__lang__ramda: #884499;

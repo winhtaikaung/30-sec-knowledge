@@ -63,3 +63,13 @@
   color: #ffffff;
   background: var(--color__lang__cpp);
 }
+
+.chip-dart {
+  color: #ffffff;
+  background: var(--color__lang__dart);
+}
+
+.chip-csharp {
+  color: #ffffff;
+  background: var(--color__lang__csharp);
+}
