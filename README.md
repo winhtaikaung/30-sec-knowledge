@@ -2,6 +2,11 @@
 
 ဒီ Application လေးဟာ @petrovicstefanrs ရဲ့[30 Seconds of Knowledge](https://github.com/petrovicstefanrs/30_seconds_of_knowledge) ဆိုတဲ့ Chrome Extension လေးရဲ့ Idea ကို မူတည်ပြီး Chrome Extension ကိုဖန်တီးထားတာပါ။ သူ့ဒီဇိုင်းတော်တော်များများကို ကူးထားပါတယ်။
 
+# Screenshot
+![image](https://user-images.githubusercontent.com/6395793/118578937-14261080-b7b3-11eb-89dd-e5a5ba552864.png)
+
+
+
 # Why re-invent ? ဘာကြောင့်ပြန်လုပ်တာလဲ
 
 သူ့ရဲ့ Original Version မှာ မပါတဲ့ တခြား အရာတွေကို လွယ်လွယ်ကူကူ ထည့်လို့ရအောင် ပြန်လုပ်ထားတာပါ။
@@ -9,7 +14,7 @@
 # What to do next?
 
 - Myanmar Language support
-- More other fundamental snippets (Algorithms, Datastructure)
+- More other fundamental snippets (Algorithms, Datastructure,Vue)
 
 # Credits
 
