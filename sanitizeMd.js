@@ -1,4 +1,4 @@
-const testFolder = './30-seconds-of-csharp/snippets/'
+const testFolder = './30-seconds-of-git/snippets/'
 const fs = require('fs')
 
 function sanitize(str, regex) {
@@ -21,7 +21,18 @@ fs.readdir(testFolder, (err, files) => {
         'tags:',
       )
       const finalData = md
-        .replace('---', `### ${UpperFirst(file.replace('.md', ''))}\n\n#### Description\n\n`)
+        .replace(
+          '---',
+          `### ${UpperFirst(
+            file
+              .replace('.md', '')
+              .replace('-', ' ')
+              .replace('-', ' ')
+              .replace('-', ' ')
+              .replace('-', ' ')
+              .replace('-', ' '),
+          )}\n\n#### Description\n\n`,
+        )
         .replace('\n\n\n', '')
       fs.writeFileSync(`${testFolder}${file}`, finalData)
     })

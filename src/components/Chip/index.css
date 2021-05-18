@@ -73,3 +73,8 @@
   color: #ffffff;
   background: var(--color__lang__csharp);
 }
+
+.chip-git {
+  color: #ffffff;
+  background: var(--color__lang__git);
+}
