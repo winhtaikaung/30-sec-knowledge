@@ -5,8 +5,8 @@
 .fabButton + label {
   cursor: pointer;
   position: fixed;
-  right: 2em;
-  bottom: 1em;
+  right: 30px;
+  bottom: 10px;
   background-color: var(--color__white);
   height: var(--l);
   width: var(--l);
@@ -22,8 +22,8 @@
 
 .button > img {
   position: relative;
-  right: calc(1em / 2);
-  top: calc(-0.5em);
+  right: 2px;
+  top: -2px;
 }
 
 .one,
@@ -31,11 +31,11 @@
 .three {
   cursor: pointer;
   position: fixed;
-  right: 2.5em;
+  right: 33px;
   bottom: 1em;
   padding: 1em;
-  width: 1em;
-  height: 1em;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   opacity: 0;
   z-index: 1;

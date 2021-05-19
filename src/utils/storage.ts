@@ -3,13 +3,22 @@ export const browserObject = chrome ? chrome : browser
 
 export const SETTING_STORAGE = 'setting_storage'
 
+export const clearStorage = () => {
+  browserObject.storage.sync.clear()
+}
+
 export const setStorage = (key: string, value: any) => {
   const setOptions = new Promise((resolve, reject) => {
-    browserObject.storage.sync.set({ [key]: value }, () => {
-      if (browserObject.runtime.lastError) reject(null)
+    if (browserObject && browserObject.storage) {
+      browserObject.storage.sync.set({ [key]: value }, () => {
+        if (browserObject.runtime.lastError) reject(null)
 
+        resolve(true)
+      })
+    } else {
+      localStorage.setItem(key, JSON.stringify({ setting_storage: value }))
       resolve(true)
-    })
+    }
   })
 
   return setOptions
@@ -21,13 +30,19 @@ export const createDefaultOptions = (options: any) => {
 
 export const getStorage = (key: string) => {
   const getOptions = new Promise((resolve, reject) => {
-    browserObject.storage.sync.get([key], (options: any) => {
-      if (browserObject.runtime.lastError) {
-        reject(null)
-      }
+    if (browserObject && browserObject.storage) {
+      browserObject.storage.sync.get([key], (options: any) => {
+        if (browserObject.runtime.lastError) {
+          reject(null)
+        }
 
-      resolve(options)
-    })
+        resolve(options)
+      })
+    } else {
+      const option = localStorage.getItem(key)
+
+      resolve(JSON.parse(option || '{}'))
+    }
   })
 
   return getOptions

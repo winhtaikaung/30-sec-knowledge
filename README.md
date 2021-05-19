@@ -31,6 +31,7 @@
 - C#
 - Dart
 - Go
+- Git
 
 ---
 
@@ -51,6 +52,7 @@ The list for snippet repos can be found bellow:
 - C# Snippets: [30 Seconds of C# / Issues](https://github.com/30-seconds/30-seconds-of-csharp/issues)
 - Golang Snippets: [30 Seconds of Golang / Issues](https://github.com/30-seconds/30-seconds-of-golang/issues)
 - Dart Snippets: [30 Seconds of Dart / Issues](https://github.com/30-seconds/30-seconds-of-dart/issues)
+- Git Snippets: [30 Seconds of Git / Issues](https://github.com/30-seconds/30-seconds-of-git/issues)
 
 ---
 

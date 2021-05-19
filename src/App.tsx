@@ -55,55 +55,60 @@ const App: React.FC<{ timestamp: string }> = ({ timestamp }) => {
     }
 
     extractData()
+    // eslint-disable-next-line
   }, [timestamp])
 
   return (
-    <SettingPickerContext.Provider
-      value={{
-        setting: bufferedSetting,
-        getSetting: async () => {
-          const storedSetting = await getStorage(SETTING_STORAGE)
+    <>
+      {bufferedSetting && (
+        <SettingPickerContext.Provider
+          value={{
+            setting: bufferedSetting,
+            getSetting: async () => {
+              const storedSetting = await getStorage(SETTING_STORAGE)
 
-          if (isEmpty(storedSetting)) {
-            return bufferedSetting as SettingObject
-          } else {
-            // @ts-ignore
-            return storedSetting[SETTING_STORAGE] as SettingObject
-          }
-        },
-        setSetting: async (updatedSetting: SettingObject) => {
-          saveBufferedSetting(updatedSetting)
-          setStorage(SETTING_STORAGE, updatedSetting)
-          const snippetContainer = document.body
-          SnackBarMessage('Setting has been saved', snippetContainer)
-        },
-      }}
-    >
-      <div className={`App ${bufferedSetting.theme === 'dark' ? 'bg-black font-white' : 'bg-white font-black'}`}>
-        <a
-          href="https://github.com/winhtaikaung/30-sec-knowledge"
-          rel="noreferrer"
-          className="app-link"
-          target="_blank"
+              if (isEmpty(storedSetting)) {
+                return bufferedSetting as SettingObject
+              } else {
+                // @ts-ignore
+                return storedSetting[SETTING_STORAGE] as SettingObject
+              }
+            },
+            setSetting: async (updatedSetting: SettingObject) => {
+              saveBufferedSetting(updatedSetting)
+              setStorage(SETTING_STORAGE, updatedSetting)
+              const snippetContainer = document.body
+              SnackBarMessage('Setting has been saved', snippetContainer)
+            },
+          }}
         >
-          <img className="app-logo" alt="appLogo" src={logo} />
-        </a>
-        <Router>
-          <Switch>
-            <Route exact path={`${process.env.PUBLIC_URL}/`}>
-              <SnippetView timestamp={new Date().toString()} />
-            </Route>
-            <Route exact path={`${process.env.PUBLIC_URL}/home`}>
-              <SnippetView timestamp={new Date().toString()} />
-            </Route>
-            <Route exact path={`${process.env.PUBLIC_URL}/setting`}>
-              <SettingView />
-            </Route>
-          </Switch>
-          <FabMenu />
-        </Router>
-      </div>
-    </SettingPickerContext.Provider>
+          <div className={`App ${bufferedSetting.theme === 'dark' ? 'bg-black font-white' : 'bg-white font-black'}`}>
+            <a
+              href="https://github.com/winhtaikaung/30-sec-knowledge"
+              rel="noreferrer"
+              className="app-link"
+              target="_blank"
+            >
+              <img className="app-logo" alt="appLogo" src={logo} />
+            </a>
+            <Router>
+              <Switch>
+                <Route exact path={`${process.env.PUBLIC_URL}/`}>
+                  <SnippetView timestamp={new Date().toString()} />
+                </Route>
+                <Route exact path={`${process.env.PUBLIC_URL}/home`}>
+                  <SnippetView timestamp={new Date().toString()} />
+                </Route>
+                <Route exact path={`${process.env.PUBLIC_URL}/setting`}>
+                  <SettingView />
+                </Route>
+              </Switch>
+              <FabMenu />
+            </Router>
+          </div>
+        </SettingPickerContext.Provider>
+      )}
+    </>
   )
 }
 

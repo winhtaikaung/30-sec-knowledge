@@ -30,6 +30,7 @@ const SnippetView: React.FC<{ timestamp: string }> = ({ timestamp }) => {
       }
       doFetch()
     }
+    // eslint-disable-next-line
   }, [timestamp])
 
   return (
