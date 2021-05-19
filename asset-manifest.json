@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/30-sec-knowledge/static/css/main.d4c64e29.chunk.css",
-    "main.js": "/30-sec-knowledge/static/js/main.6303b437.chunk.js",
+    "main.js": "/30-sec-knowledge/static/js/main.bc5bf2f8.chunk.js",
     "runtime-main.js": "/30-sec-knowledge/static/js/runtime-main.1a101331.js",
-    "static/js/2.70d393e3.chunk.js": "/30-sec-knowledge/static/js/2.70d393e3.chunk.js",
+    "static/js/2.1808498c.chunk.js": "/30-sec-knowledge/static/js/2.1808498c.chunk.js",
     "static/js/3.092139fe.chunk.js": "/30-sec-knowledge/static/js/3.092139fe.chunk.js",
     "index.html": "/30-sec-knowledge/index.html",
-    "static/js/2.70d393e3.chunk.js.LICENSE.txt": "/30-sec-knowledge/static/js/2.70d393e3.chunk.js.LICENSE.txt",
+    "static/js/2.1808498c.chunk.js.LICENSE.txt": "/30-sec-knowledge/static/js/2.1808498c.chunk.js.LICENSE.txt",
     "static/media/checked-square.aab1475c.svg": "/30-sec-knowledge/static/media/checked-square.aab1475c.svg",
     "static/media/codepen.d19338a1.svg": "/30-sec-knowledge/static/media/codepen.d19338a1.svg",
     "static/media/home_icon.076ab89d.svg": "/30-sec-knowledge/static/media/home_icon.076ab89d.svg",
@@ -19,8 +19,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.1a101331.js",
-    "static/js/2.70d393e3.chunk.js",
+    "static/js/2.1808498c.chunk.js",
     "static/css/main.d4c64e29.chunk.css",
-    "static/js/main.6303b437.chunk.js"
+    "static/js/main.bc5bf2f8.chunk.js"
   ]
 }
