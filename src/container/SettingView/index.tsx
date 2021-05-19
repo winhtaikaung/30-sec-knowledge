@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { useHistory } from 'react-router-dom'
 import { SettingPickerContext } from '../../App'
 import OptionCheckBox from '../../components/OptionCheckBox'
 import OptionRange from '../../components/OptionRange'
@@ -8,18 +9,23 @@ import { browserObject } from '../../utils/storage'
 import './index.css'
 const SettingView: React.FC = () => {
   const { setting } = React.useContext(SettingPickerContext)
-
+  const { replace, go } = useHistory()
   return (
     <>
       <div className={`setting-container ${setting.theme === 'dark' ? 'font-white' : 'font-black'}`}>
         <h2>Suprise Me</h2>
         <div
           className="button-orange button "
-          onClick={() =>
-            browserObject.tabs.create({
-              url: 'about:newtab',
-            })
-          }
+          onClick={() => {
+            if (browserObject.tabs) {
+              browserObject.tabs.create({
+                url: 'about:newtab',
+              })
+            } else {
+              replace('/home')
+              go(0)
+            }
+          }}
         >
           <div className="button-text">Open Random Snippet</div>
         </div>
