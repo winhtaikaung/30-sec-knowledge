@@ -1,0 +1,26 @@
+{
+  "name": "စက္ကန့် ၃၀ လေ့လာဖွယ်",
+  "description": "စက္ကန့် ၃၀ လေ့လာဖွယ် Tab တခုခုဖွင့်တိုင်း စောင့်နေရမယ့် ၃၀စက္ကန့်ကို အကျိုးရှိရှိ အသုံးချလိုက်ပါ။",
+  "manifest_version": 2,
+  "version": "1.0.0",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "permissions": ["storage", "clipboardWrite", "tabs"],
+  "browser_action": {
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png"
+    },
+    "default_popup": "/index.html#/setting"
+  },
+  "background": {
+    "persistent": false,
+    "page": "index.html"
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  }
+}
