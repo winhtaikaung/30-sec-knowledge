@@ -86,7 +86,7 @@ bubbleSort(arr)
 
 **Auxiliary Space:** O(1)
 
-##### Additional links
+### Additional links
 
 - [Recursive Bubble Sort](https://www.geeksforgeeks.org/recursive-bubble-sort/)
 - [Coding practice for sorting.](https://practice.geeksforgeeks.org/tag-page.php?tag=sorting&isCmp=0)

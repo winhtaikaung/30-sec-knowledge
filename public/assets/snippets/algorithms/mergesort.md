@@ -102,7 +102,7 @@ if __name__ == '__main__':
 
 Space complexity: n
 
-##### Additional links
+### Additional links
 
 - [Can we implement QuickSort Iteratively? ](https://www.geeksforgeeks.org/merge-sort-for-linked-list/)
 - [Inversion Count Problem](https://www.geeksforgeeks.org/counting-inversions/)

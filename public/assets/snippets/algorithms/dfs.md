@@ -83,7 +83,7 @@ where V is number of vertices in the graph and E is number of edges in the graph
 O(V).
 Since, an extra visited array is needed of size V.
 
-##### Additional links
+### Additional links
 
 - [Applications of DFS](https://www.geeksforgeeks.org/applications-of-depth-first-search/)
 - [Breadth First Traversal for a Graph](https://www.geeksforgeeks.org/breadth-first-traversal-for-a-graph/)

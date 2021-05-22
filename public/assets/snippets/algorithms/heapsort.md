@@ -112,7 +112,7 @@ Time complexity of createAndBuildHeap() is **O(n)**
 
 overall time complexity of Heap Sort is **O(nLogn)**.
 
-##### Additional links
+### Additional links
 
 - [Sort a nearly sorted (or K sorted) array ](https://www.geeksforgeeks.org/nearly-sorted-algorithm/)
 - [ k largest(or smallest) elements in an array ](https://www.geeksforgeeks.org/k-largestor-smallest-elements-in-an-array/)

@@ -51,6 +51,6 @@ for i in range(len(arr)):
 
 **Best complexity:** O(1)
 
-##### Additional links
+### Additional links
 
 - [Binary Insertion Sort](http://quiz.geeksforgeeks.org/binary-insertion-sort/)
