@@ -11,6 +11,8 @@ const conf = config('development')
 
 let copyDestination = './dev'
 conf.output.path = path.join(process.cwd(), './dev')
+fs.removeSync('./build')
+fs.removeSync('./dev')
 
 if (!process.env.GENERATE_SOURCEMAP) {
   conf.devtool = ''

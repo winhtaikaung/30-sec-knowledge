@@ -23,10 +23,15 @@ const SnippetView: React.FC<{ timestamp: string }> = ({ timestamp }) => {
         const setting = await getSetting()
 
         const randomSnippetPath = randomize(setting.selectedOptions)
-
-        fetch(`${process.env.PUBLIC_URL}/assets/snippets/${randomSnippetPath}`)
-          .then((res) => res.text())
-          .then((text) => setSnippetMeta({ snippet: text, category: randomSnippetPath.split('/')[0] }))
+        if (!process.env.REACT_APP_API_HOST) {
+          fetch(`${process.env.PUBLIC_URL}/assets/snippets/${randomSnippetPath}`)
+            .then((res) => res.text())
+            .then((text) => setSnippetMeta({ snippet: text, category: randomSnippetPath.split('/')[0] }))
+        } else {
+          fetch(`${process.env.REACT_APP_API_HOST}/assets/snippets/${randomSnippetPath}`)
+            .then((res) => res.text())
+            .then((text) => setSnippetMeta({ snippet: text, category: randomSnippetPath.split('/')[0] }))
+        }
       }
       doFetch()
     }

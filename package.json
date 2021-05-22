@@ -22,11 +22,11 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "INLINE_RUNTIME_CHUNK=false react-scripts build",
-    "build:site": "GENERATE_SOURCEMAP=false react-scripts build",
+    "start": "PUBLIC_URL=/ react-scripts start",
+    "build": "INLINE_RUNTIME_CHUNK=false  react-scripts build",
+    "build:site": "REACT_APP_API_HOST=https://winhtaikaung.github.io/30-sec-knowledge/ GENERATE_SOURCEMAP=false react-scripts build",
     "deploy:site": "gh-pages -d build",
-    "watch": "GENERATE_SOURCEMAP=true node scripts/watch.js",
+    "watch": "GENERATE_SOURCEMAP=true PUBLIC_URL=/ node scripts/watch.js",
     "packextension": "sh packcrx.sh extension/30-Sec keys/30-Sec.pem extension && rm -rf extension/30-Sec",
     "build:extension": "node scripts/watch.js && yarn packextension",
     "test": "react-scripts test",

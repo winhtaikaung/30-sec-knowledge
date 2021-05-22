@@ -91,15 +91,15 @@ const App: React.FC<{ timestamp: string }> = ({ timestamp }) => {
             >
               <img className="app-logo" alt="appLogo" src={logo} />
             </a>
-            <Router>
+            <Router basename="/">
               <Switch>
-                <Route exact path={`${process.env.PUBLIC_URL}/`}>
+                <Route exact path={`/`}>
                   <SnippetView timestamp={new Date().toString()} />
                 </Route>
-                <Route exact path={`${process.env.PUBLIC_URL}/home`}>
+                <Route exact path={`/home`}>
                   <SnippetView timestamp={new Date().toString()} />
                 </Route>
-                <Route exact path={`${process.env.PUBLIC_URL}/setting`}>
+                <Route exact path={`/setting`}>
                   <SettingView />
                 </Route>
               </Switch>

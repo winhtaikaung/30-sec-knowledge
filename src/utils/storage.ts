@@ -4,7 +4,11 @@ export const browserObject = chrome ? chrome : browser
 export const SETTING_STORAGE = 'setting_storage'
 
 export const clearStorage = () => {
-  browserObject.storage.sync.clear()
+  if (browserObject && browserObject.storage) {
+    browserObject.storage.sync.clear()
+  } else {
+    localStorage.clear()
+  }
 }
 
 export const setStorage = (key: string, value: any) => {
