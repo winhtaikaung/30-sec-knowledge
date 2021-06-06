@@ -134,7 +134,7 @@ print(f'Sorted array: {array}')
 
 **Best complexity:** O(n\*log(n))
 
-##### Additional links
+### Additional links
 
 - [Can we implement QuickSort Iteratively? ](https://www.geeksforgeeks.org/iterative-quick-sort/)
 - [Why Quick Sort is preferred over MergeSort for sorting Arrays ](https://www.geeksforgeeks.org/quick-sort/)

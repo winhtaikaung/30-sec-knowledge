@@ -86,7 +86,7 @@ g.BFS(2)
 
 where V is number of vertices in the graph and E is number of edges in the graph.
 
-##### Additional links
+### Additional links
 
 - [Recent Articles on BFS](https://www.geeksforgeeks.org/tag/bfs/)
 - [Depth First Traversal](https://www.geeksforgeeks.org/depth-first-traversal-for-a-graph/)

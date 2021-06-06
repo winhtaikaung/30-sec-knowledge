@@ -117,6 +117,6 @@ else:
 
 **Complexity:** O(1)
 
-##### Additional links
+### Additional links
 
 - [Interpolation Search Vs BinarySearch](https://www.geeksforgeeks.org/g-fact-84/)
